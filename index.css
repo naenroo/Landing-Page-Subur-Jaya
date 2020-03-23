@@ -1,0 +1,252 @@
+body {
+   background-color: rgba(207, 207, 214, 0.68);
+   background: #ffc600;
+   color:white;
+   text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+.jump span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.1s;
+  cursor:url('http://csscursor.info/source/santahand.png'), default;
+}
+.jump span:hover {
+  transform:translateY(-20px) scale(2) rotate(10deg);
+  z-index: 1;
+}
+
+#container-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+.card {
+  border : solid rgb(56, 136, 168) 1.5px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.rounded-circle {
+  width: 40%;
+  -webkit-box-shadow: 0px 10px 8px 2px rgba(92, 95, 99, 0.86);
+          box-shadow: 0px 10px 8px 2px rgba(92, 95, 99, 0.86);
+  padding: 2px;
+}
+
+.rounded-circle:hover {
+  background-color: yellow;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#container-LocalMovies {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-thumbnail {
+  width: 40%;
+  margin-top: 200px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.server {
+  margin-top: 8px;
+  padding:4px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 150px;
+}
+
+/* lightbox */
+/* Font */
+@font-face {
+  font-family: 'BebasNeue';
+  src: url(./assets/font/bebasneue_regular-webfont.woff) format('woff');
+}
+/* Style Utama */
+body {
+  font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;
+  background-color: #ddd;
+
+}
+
+h1 {
+  font-size: 1.5em;
+  margin: 20px 0;
+  text-align: center;
+  text-shadow: 1px 1px 1px #a9c6d1;
+  color: coral;
+}
+
+.container {
+  width: 600px;
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 3px 3px rgba(38, 37, 37, 0.3);
+  border-radius: 5px;
+}
+
+.gallery li img {
+  border-radius: 50%:
+}
+
+.overlay .close {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -20px;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  line-height: 14px;
+  padding: 5px;
+}
+
+.overlay:target .close {
+  animation: slideDownFade .9s .9s forwards;
+}
+
+.gallery li {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #666;
+  float: left;
+  margin-right: 20px;
+  position: relative;
+}
+
+.gallery li span {
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(200, 200, 200, 0.5);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 120px;
+  color: #333;
+  text-shadow: 1px 1px 1px #ddd;
+  opacity: 0;
+  transform: scale(0) rotate(0);
+  transition: 0.3s;
+}
+
+.gallery li a:hover span {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+}
+
+.clear {
+  clear: both;
+}
+
+
+/* overlay */
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: .9s;
+  text-align: center;
+}
+
+ .overlay:target {
+   width: auto;
+   height: auto;
+   bottom: 0;
+   right: 0;
+   background: rgba(0, 0, 0, 0.7);
+ }
+
+ .overlay img {
+    max-height: 100%;
+    box-shadow: 2px 2px 10px rgba(0,0,0,o.6);
+ }
+
+.overlay:target img {
+  animation: zoomAndFade 1s;
+}
+
+/* navigasi */
+.next {
+  width: 57px;
+  height: 93px;
+  background-image: url(./assets/image/next.jpg);
+  position: absolute;
+  text-indent: -9999px;
+  top: 40%;
+  margin-left: 50px;
+}
+
+.prev {
+  width: 57px;
+  height: 93px;
+  background-image: url(./assets/image/prev.jpg);
+  position: absolute;
+  text-indent: -9999px;
+  top: 40%;
+  margin-left: -100px;
+}
+
+
+
+/* animation */
+@@keyframes fadeAjah {
+  0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+  }
+}
+
+@keyframes zoomDanFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@@keyframes slideDownFade {
+  0%{
+  opacity: 0;
+  margin-top: -20px;
+  }
+}
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+/* end lightbox */
+
